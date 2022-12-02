@@ -1,0 +1,47 @@
+get init --初始化管理这个文件夹
+
+get status --检测查看
+
+git add 1.html --单独的文件加入管理
+
+git add . --当前文件夹所有的文件加入管理
+
+git commit -m 'v1' --生成版本'描述信息'
+
+git log --查看版本记录
+
+##### 1
+#个人配置：用户名、邮箱
+
+
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'NZC@DESKTOP-C4ASRP9.(none)')
+
+
+#回滚
+
+git reset --hard 3c795f8b7414aa314e328d1763ca308940dbb062  #回到这个版本号
+
+git relog #回滚之后版本的记录
+
+##### 分支
+主干线 master  
+修完bug合并到master	分支 dev 还可行 每个分支为独立的
+git branch --查看分支
+git branch dev --建立dev分支
+git checkout dev --切换到dev分支
+
+#杂七杂八
+mkdir dbhot --建文件夹
+touch 2.html --添加文件
