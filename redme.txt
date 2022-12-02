@@ -41,6 +41,8 @@ git relog #回滚之后版本的记录
 git branch --查看分支
 git branch dev --建立dev分支
 git checkout dev --切换到dev分支
+git branch bug --建一个bug分支，切换到bug分支，然后修改
+换回主分支，git merge bug ,合并分支，然后就可以git branch -d bug,删除分支了
 
 #杂七杂八
 mkdir dbhot --建文件夹
