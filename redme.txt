@@ -58,8 +58,14 @@ dev（分支）上搞开发
 git remote add origin https://github.com/Hibari-69/test1.git	起个orange别名
 git push -u origin dev
 
+git push origin dev --手动把推送地址改到仓库的origin\dev分支上
+
 克隆远程仓库
-git clone --远程仓库地址 （内部已实现git remote add origin 。。。)
+git clone --远程仓库地址 （内部已实现git remote add origin 。。。)(本地没有一点东西）
+
+###### 更新
+git pull origin dev  --把仓库origin更新的 dev分支拉下来
+
 
 
 
