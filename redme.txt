@@ -43,7 +43,33 @@ git branch dev --建立dev分支
 git checkout dev --切换到dev分支
 git branch bug --建一个bug分支，切换到bug分支，然后修改
 换回主分支，git merge bug ,合并分支，然后就可以git branch -d bug,删除分支了
+继续开发分支，合并时因主干之前修bug（会报冲突）手动修改？ 再提交就好了
+
+##### 工作流
+最简单工作流1
+至少得有两个分支  master （main）分支只保留公测版
+dev（分支）上搞开发
+
+
+##### 推
+
+输入$ git remote rm origin(删除关联的origin的远程库)
+
+git remote add origin https://github.com/Hibari-69/test1.git 
+
+git push -u origin dev
+
+
 
 #杂七杂八
 mkdir dbhot --建文件夹
 touch 2.html --添加文件
+pwd --查看路径
+cat index.html --看一下代码
+
+##### 总结
+git branch
+git branch 名称
+git checkout 名称
+git merge 要合并的分支
+git merge -d 分支名称  
