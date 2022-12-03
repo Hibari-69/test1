@@ -55,15 +55,21 @@ dev（分支）上搞开发
 
 输入$ git remote rm origin(删除关联的origin的远程库)
 
-git remote add origin https://github.com/Hibari-69/test1.git 
-
+git remote add origin https://github.com/Hibari-69/test1.git	起个orange别名
 git push -u origin dev
+
+克隆远程仓库
+git clone --远程仓库地址 （内部已实现git remote add origin 。。。)
+
+
+
 
 
 
 #杂七杂八
 mkdir dbhot --建文件夹
-touch 2.html --添加文件
+touch 2.html --添加文件（Linux）
+type nul>1.txt --加文件（win）（Windows powerShell 里不能用？）
 pwd --查看路径
 cat index.html --看一下代码
 
