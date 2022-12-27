@@ -122,11 +122,11 @@ git config --local mergetool.keepBackup false	//不用每次生成备份文件
 
 4567546745675467
 999
-
 --local	//只在当前文件夹使用
 2、启动
+11111
 git mergetool
-
+322222
 
 
 
