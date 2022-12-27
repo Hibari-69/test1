@@ -72,6 +72,8 @@ git pull origin dev  --把仓库origin更新的 dev分支拉下来
 
 
 
+
+
 #杂七杂八
 mkdir dbhot --建文件夹
 touch 2.html --添加文件（Linux）
