@@ -50,7 +50,14 @@ git branch bug --建一个bug分支，切换到bug分支，然后修改
 至少得有两个分支  master （main）分支只保留公测版
 dev（分支）上搞开发
 
+##### 开发完毕、要上线
+git checkout main合并dev分支
+git merge dev
+再推送到 仓库 main（git push origin main)
 
+git checkout dev
+git merge main
+git push origin dev
 ##### 推
 
 输入$ git remote rm origin(删除关联的origin的远程库)
@@ -67,6 +74,62 @@ git clone --远程仓库地址 （内部已实现git remote add origin 。。。
 git pull origin dev  --把仓库origin更新的 dev分支拉下来
 
 
+##### 忘push 了、写了点其他的、
+地1、地2 合并 冲突(手动修改）
+
+
+#### rebase (变基) 
+使git记录简洁
+##### 1、多个记录整合为一个记录
+git rebase -i HEAD~3	当前开始三条合并
+
+再在里面修改版本的前缀 s （下面也有提示）
+
+注意：合并记录不要在合并已经提交到库的版本了，不然后续处理过程非常麻烦
+
+##### 2、将分支的提交记录强插到主分支
+
+先切回到dev分支 git checkout dev
+在dev分支  git rebase master
+再切回到master git checkout master
+再在master分支上 merge dev 分支
+
+就看不到分支了，就很简洁
+
+##### 3、两个地方、在家Pull到仓库，在公司commit 到本地了没提交，然后回到公司
+在公司pull家里上传的代码到本地会产生分叉
+
+
+
+因为git pull =  git fetch  +git merge 
+
+咱现在就不用 git pull 
+
+改为 ： git fetch +git rebase origin/dev(就是家里上传到库的)
+
+这样就不会产生分叉了
+
+rebase 产生冲突后，他会提醒执行命令；之后再用一个 git rebase --continue
+
+
+
+##### 用beyondcompare解决冲突
+
+1、在git中配置beyondcompare
+git config --local merge.tool bc3  (取个名bc3)
+git config --local mergetool.path ' C:\Program Files\Beyond Compare 4\BCompare.exe'
+git config --local mergetool.keepBackup false	//不用每次生成备份文件
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -81,9 +144,27 @@ type nul>1.txt --加文件（win）（Windows powerShell 里不能用？）
 pwd --查看路径
 cat index.html --看一下代码
 
+git push --force --强制提交
+
+git log --graph #图形流程化展示
+git log --graph --pretty=format:"%h %s" #格式化输出一下
+
+
+
 ##### 总结
 git branch
 git branch 名称
 git checkout 名称
 git merge 要合并的分支
 git merge -d 分支名称  
+
+git branch -m master main	git中master改名为main
+git fetch origin	//获取初始提交(initial commit)
+git rebase origin/main
+
+BeyondCompare	解决冲突
+
+
+
+
+
