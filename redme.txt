@@ -130,6 +130,12 @@ git mergetool
 
 
 
+######
+
+一个版本完成后可以用个
+git tag -a v1 -m "第一版"		对当前的提交打个tag
+
+
 
 
 
@@ -169,6 +175,10 @@ git fetch origin	//获取初始提交(initial commit)
 git rebase origin/main
 
 BeyondCompare	解决冲突
+
+
+##### 多人协同开发
+一般来说每个人都有自己的一条分支来开发
 
 
 
